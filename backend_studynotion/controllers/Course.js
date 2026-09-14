@@ -1,7 +1,7 @@
 const Course = require("../models/Course")
 const Category = require("../models/Category")
 const Section = require("../models/Section")
-const SubSection = require("../models/Subsection")
+const SubSection = require("../models/SubSection")
 const User = require("../models/User")
 const { uploadImageToCloudinary } = require("../utils/imageUploader")
 const CourseProgress = require("../models/CourseProgress")
@@ -435,6 +435,8 @@ exports.getInstructorCourses = async (req, res) => {
   } catch (error) {
     console.error(error)
     res.status(500).json({
+      
+
       success: false,
       message: "Failed to retrieve instructor courses",
       error: error.message,
