@@ -1,13 +1,13 @@
 const nodemailer = require("nodemailer")
 
 const mailSender = async (email, title, body) => {
+   console.log("🔥🔥 SEND OTP FUNCTION STARTED")
   try {
     let transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
       port: 587,
       secure: false,
       requireTLS: true,
-       family: 4,
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
