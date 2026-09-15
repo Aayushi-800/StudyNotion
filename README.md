@@ -2,6 +2,10 @@
 
 StudyNotion is a full-stack EdTech platform where students can explore courses, create an account, add courses to their cart, make payments, and track their learning progress. Instructors can create and manage their courses through the platform.
 
+## 🚀 Live Demo
+
+**[StudyNotion Live Demo](https://study-notion-one-bice.vercel.app/)**
+
 ## 🚀 Features
 
 ### 👨‍🎓 Student Features
@@ -32,9 +36,9 @@ StudyNotion is a full-stack EdTech platform where students can explore courses, 
 * JWT-based authentication
 * MongoDB database
 * Cloudinary integration for media
-* Nodemailer for emails and OTP
+* Resend integration for emails and OTP
 * Responsive user interface
-* REST API based backend
+* REST API-based backend
 
 ## 🛠️ Tech Stack
 
@@ -55,12 +59,12 @@ StudyNotion is a full-stack EdTech platform where students can explore courses, 
 * MongoDB
 * Mongoose
 * JWT
-* Nodemailer
 
 ### Third-Party Services
 
 * Cloudinary
 * Razorpay
+* Resend
 
 ## 📸 Screenshots
 
@@ -169,7 +173,7 @@ Create the required `.env` files for the frontend and backend and add your own c
 * MongoDB
 * JWT
 * Cloudinary
-* Nodemailer
+* Resend
 * Razorpay
 
 > Never commit `.env` files or secret keys to GitHub.
@@ -198,6 +202,7 @@ While building StudyNotion, I worked with:
 * Course and user management
 * Frontend-backend API integration
 * Debugging and troubleshooting
+* Deployment using Vercel and Render
 
 ## 🔮 Future Improvements
 
@@ -212,4 +217,3 @@ While building StudyNotion, I worked with:
 **Aayushi**
 
 GitHub: [Aayushi-800](https://github.com/Aayushi-800)
-
