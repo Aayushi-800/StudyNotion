@@ -6,11 +6,14 @@ const mailSender = async (email, title, body) => {
       host: process.env.MAIL_HOST,
       port: 587,
       secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
       },
     })
+    await transporter.verify()
+console.log("✅ SMTP CONNECTION SUCCESS")
     console.log("MAIL CONFIG:", {
   host: process.env.MAIL_HOST,
   user: process.env.MAIL_USER,
