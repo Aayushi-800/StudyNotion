@@ -6,6 +6,7 @@ const otpGenerator = require("otp-generator")
 const mailSender = require("../utils/mailSender")
 const { passwordUpdated } = require("../mail/templates/passwordUpdate")
 const Profile = require("../models/Profile")
+const otpTemplate = require("../mail/templates/emailverificationTemplate")
 require("dotenv").config()
 
 // Signup Controller for Registering USers
@@ -229,7 +230,13 @@ exports.sendotp = async (req, res) => {
     }
     const otpPayload = { email, otp }
     const otpBody = await OTP.create(otpPayload)
+
     console.log("OTP Body", otpBody)
+    await mailSender(
+  email,
+  "OTP Verification Email",
+  otpTemplate(otp)
+)
     res.status(200).json({
       success: true,
       message: `OTP Sent Successfully`,
