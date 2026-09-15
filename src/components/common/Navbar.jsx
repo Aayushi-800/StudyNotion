@@ -98,6 +98,7 @@ function Navbar() {
                               ?.map((subLink, i) => (
                                 <Link
                                   to={`/catalog/${subLink.name
+                                    .replace(/\//g, "-")
                                     .split(" ")
                                     .join("-")
                                     .toLowerCase()}`}
