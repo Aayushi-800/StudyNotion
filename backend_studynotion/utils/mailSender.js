@@ -11,6 +11,11 @@ const mailSender = async (email, title, body) => {
         pass: process.env.MAIL_PASS,
       },
     })
+    console.log("MAIL CONFIG:", {
+  host: process.env.MAIL_HOST,
+  user: process.env.MAIL_USER,
+  passExists: !!process.env.MAIL_PASS
+})
 
     let info = await transporter.sendMail({
       from: `"Studynotion | CodeHelp" <${process.env.MAIL_USER}>`, // sender address
